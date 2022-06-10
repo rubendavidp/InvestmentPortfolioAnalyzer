@@ -1,4 +1,4 @@
-# Stocks-analizer
+# Investment Portfolio
 
 # Español
 Este proyecto tiene como finalidad analizar las acciones que el usuario desee y generar un portafolio de inversión óptimo según las acciones anteriormente seleccionadas.
@@ -14,4 +14,4 @@ The data source is from Yahoo Finance. The data for this study is gathered from 
 Write the number of shares you want to be studied and the timeframe.
 The program analyzes the shares and graphs a correlation matrix, a histogram with the distribution of returns, and generates an investment portfolio considering the level of risk and possible returns.
 
-@author: Ruben D. Perez
+@author: Ruben D. Perez --> @rubendavidp
