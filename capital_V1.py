@@ -2,6 +2,8 @@ import pandas as pd
 import pandas_datareader as wb
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
+import scipy.optimize as optimize
 
 #Acciones a analizar 
 while True:
@@ -29,6 +31,24 @@ while True:
 
 #--- MARKOWITZ
 
+    port_returns = []
+    port_vols = []
+
+    for i in range (100):
+        num_assets = len(tickers)
+        weights = np.random.random(num_assets)
+        weights /= np.sum(weights)
+        ret_esp = np.sum(returns.mean() * weights)    ##--- Retorno esperado del portafolio
+        var_esp = np.sqrt(np.dot(weights.T, np.dot(returns.cov(), weights)))  ##--- Volatilidad esperada del portafolio
+        port_returns.append(ret_esp)
+        port_vols.append(var_esp)
+
+    ## --- Markowitz's bullets
+    plt.figure(figsize = (12,6))
+    plt.scatter(port_vols, port_returns)
+    plt.xlabel('Volatilidad de la cartera')
+    plt.ylabel('Retorno de la cartera')
+    plt.show()
 
 
 
