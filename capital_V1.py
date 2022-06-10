@@ -47,4 +47,3 @@ while True:
     sns.heatmap(corr, annot = True, linewidths = 1)
     plt.title("Matriz de correlación")
     plt.show()
-exit()
