@@ -23,7 +23,7 @@ while True:
 
 #dataframe de precios
 
-    print('\nMatriz de covarianza:\n',returns.cov())
+    print('\nMatriz de covarianza:\n', returns.cov())
     print('\nEl retorno promedio de las acciones es:\n\n', returns.mean())
     print('\n\nEl precio promedio de las acciones es:\n\n', data.mean())
     print('\n\nMatriz de correlación:\n\n', corr)
@@ -34,17 +34,17 @@ while True:
     port_returns = []
     port_vols = []
 
-    for i in range (100):
+    for i in range(100):
         num_assets = len(tickers)
         weights = np.random.random(num_assets)
         weights /= np.sum(weights)
-        ret_esp = np.sum(returns.mean() * weights)    ##--- Retorno esperado del portafolio
-        var_esp = np.sqrt(np.dot(weights.T, np.dot(returns.cov(), weights)))  ##--- Volatilidad esperada del portafolio
+        ret_esp = np.sum(returns.mean() * weights)    # -->  Retorno esperado del portafolio
+        var_esp = np.sqrt(np.dot(weights.T, np.dot(returns.cov(), weights)))  # --> Volatilidad esperada del portafolio
         port_returns.append(ret_esp)
         port_vols.append(var_esp)
 
     ## --- Markowitz's bullets
-    plt.figure(figsize = (12,6))
+    plt.figure(figsize=(12, 6))
     plt.scatter(port_vols, port_returns)
     plt.xlabel('Volatilidad de la cartera')
     plt.ylabel('Retorno de la cartera')
@@ -64,6 +64,6 @@ while True:
     plt.show()
 
     #Heatmap de la matriz de correlación
-    sns.heatmap(corr, annot = True, linewidths = 1)
+    sns.heatmap(corr, annot=True, linewidths=1)
     plt.title("Matriz de correlación")
     plt.show()
