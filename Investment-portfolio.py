@@ -62,10 +62,10 @@ optimal_sharpe = optimize.minimize(minimize_sharpe, initializer, method = 'SLSQP
 optimal_sharpe_weights = optimal_sharpe['x'].round(4)
 optimal_stats = portfolio_stats(optimal_sharpe_weights, returns)
 
-print("Pesos óptimos de la cartera: ", list(zip(tickers, list(optimal_sharpe_weights*100))))
-print("Retorno óptimo de la cartera: ", round(optimal_stats['Return']*100,4))
-print("Volatilidad óptima de la cartera: ", round(optimal_stats['Volatility']*100,4))
-print("Ratio Sharpe óptimo de la cartera: ", round(optimal_stats['Sharpe'],4))
+print('\n\nPesos óptimos de la cartera: ', list(zip(tickers, list(optimal_sharpe_weights*100))))
+print('\n\nRetorno óptimo de la cartera: ', round(optimal_stats['Return']*100,4))
+print('\n\nVolatilidad óptima de la cartera: ', round(optimal_stats['Volatility']*100,4))
+print('\n\nRatio Sharpe óptimo de la cartera: ', round(optimal_stats['Sharpe'],4))
 
 #-- Markowitz's Graph
 plt.figure(figsize = (12,6))
@@ -84,8 +84,8 @@ plt.show()
 
 #-- Histograma
 sns.histplot(returns)
-plt.xlabel('retornos diarios')
-plt.ylabel('frecuencia')
+plt.xlabel('Retornos diarios')
+plt.ylabel('Frecuencia')
 plt.show()
 
 #-- Heatmap de la matriz de correlación
