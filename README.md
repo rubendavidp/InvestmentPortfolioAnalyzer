@@ -26,6 +26,7 @@ The program analyzes the shares and graphs a correlation matrix, a histogram wit
 # Author
 
 - [@rubendavidp](https://www.github.com/rubendavidp)
+- Para poder desarrollar este proyecto seguí algunos tutoriales del blog de Gerard Sánchez: https://gsnchez.com/blog/python_for_finance/
 
 ## Support
 
