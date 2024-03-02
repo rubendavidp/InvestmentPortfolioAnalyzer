@@ -5,11 +5,11 @@ name = "pypi"
 
 [packages]
 pandas = "*"
-pandas-datareader = "*"
 numpy = "*"
 matplotlib = "*"
 seaborn = "*"
 scipy = "*"
+yfinance = "*"
 
 [dev-packages]
 datetime = "*"
