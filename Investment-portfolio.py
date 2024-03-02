@@ -7,7 +7,7 @@ import scipy.optimize as optimize
 
 
 #-- Acciones a analizar 
-Tickers = input("Acciones a analizar:\n ") # CORFICOLCF.CL, ECOPETROL.CL, PFBCOLOM.CL, PFGRUPSURA.CL, BCOLOMBIA.CL, ISA.CL, CEMARGOS.CL, GEB.CL, CELSIA.CL, NUTRESA.CL, GRUPOARGOS.CL, ICOLCAP.CL, grupoaval.cl, PFAVAL.CL, TERPEL.CL, PFDAVVNDA.CL, PFGRUPOARG.CL, PFCORFICOL.CL
+Tickers = input("Acciones a analizar:\n ")
 start_date = input('Fecha de inicio (YYYY-MM-DD):\n')
 end_date = input('Fecha final (YYYY-MM-DD):\n')
 
